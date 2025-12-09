@@ -20,7 +20,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Initialize Lucide icons for new content
     lucide.createIcons();
+
+    // Set current year in footer
+    setCurrentYear();
 });
+
+function setCurrentYear() {
+    const yearElement = document.getElementById("current-year");
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+}
 
 function initAccordion() {
     const accordionHeaders = document.querySelectorAll(".accordion-header");

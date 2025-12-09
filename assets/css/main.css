@@ -532,7 +532,7 @@ body.dark-mode .footer-text {
 .footer-tech {
     font-size: 14px;
     color: #777;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 body.dark-mode .footer-tech {
