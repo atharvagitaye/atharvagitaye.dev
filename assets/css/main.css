@@ -1,5 +1,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
 }
 
 nav {
@@ -11,7 +17,11 @@ nav {
     right: 0;
     z-index: 1000;
     transform: translateY(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+body.dark-mode nav {
+    background: rgba(26, 26, 26, 0.95);
 }
 
 nav.hide {
@@ -30,12 +40,37 @@ nav.hide {
 
 .logo {
     height: 60px;
-    font-size: 28px;
-    font-weight: bold;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+#theme-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover #theme-icon {
+    transform: rotate(20deg);
 }
 
 .nav-menu {
@@ -53,20 +88,24 @@ nav.hide {
     position: relative;
 }
 
+body.dark-mode .nav-menu li a {
+    color: #ffffff;
+}
+
 .nav-menu li a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgb(66, 165, 245);
     transition: width 0.3s ease;
 }
 
-.nav-menu li a:hover {
+/* .nav-menu li a:hover {
     color: rgb(66, 165, 245);
-}
+} */
 
 .nav-menu li a:hover::after {
     width: 100%;
@@ -88,6 +127,14 @@ nav.hide {
     border-radius: 3px;
     position: absolute;
     transition: all 0.3s ease;
+}
+
+body.dark-mode .menu-line {
+    background: #ffffff;
+}
+
+body.dark-mode .nav-menu li a::after {
+    background: rgb(66, 165, 245);
 }
 
 .menu-line:first-child {

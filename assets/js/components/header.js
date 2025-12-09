@@ -2,7 +2,33 @@ export function initHeader() {
     const menuIcon = document.getElementById("menuIcon");
     const navMenu = document.getElementById("navMenu");
     const nav = document.querySelector("nav");
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const logo = document.getElementById("logo");
     let lastScroll = 0;
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem("theme") || "light";
+    if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.src = "/assets/images/icons/light-mode.png";
+        logo.src = "/assets/images/logos/logo-dark.png";
+    }
+
+    // Theme toggle functionality
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        
+        if (document.body.classList.contains("dark-mode")) {
+            themeIcon.src = "/assets/images/icons/light-mode.png";
+            logo.src = "/assets/images/logos/logo-dark.png";
+            localStorage.setItem("theme", "dark");
+        } else {
+            themeIcon.src = "/assets/images/icons/dark-mode.png";
+            logo.src = "/assets/images/logos/logo-light.png";
+            localStorage.setItem("theme", "light");
+        }
+    });
 
     // Menu toggle functionality
     menuIcon.addEventListener("click", () => {
