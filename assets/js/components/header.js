@@ -7,12 +7,22 @@ export function initHeader() {
     const logo = document.getElementById("logo");
     let lastScroll = 0;
 
+    // Function to update theme icon
+    function updateThemeIcon(isDark) {
+        themeToggle.innerHTML = isDark 
+            ? '<i data-lucide="sun" id="theme-icon"></i>'
+            : '<i data-lucide="moon" id="theme-icon"></i>';
+        lucide.createIcons();
+    }
+
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem("theme") || "light";
     if (currentTheme === "dark") {
         document.body.classList.add("dark-mode");
-        themeIcon.src = "/assets/images/icons/light-mode.png";
+        updateThemeIcon(true);
         logo.src = "/assets/images/logos/logo-dark.png";
+    } else {
+        lucide.createIcons();
     }
 
     // Theme toggle functionality
@@ -20,11 +30,11 @@ export function initHeader() {
         document.body.classList.toggle("dark-mode");
         
         if (document.body.classList.contains("dark-mode")) {
-            themeIcon.src = "/assets/images/icons/light-mode.png";
+            updateThemeIcon(true);
             logo.src = "/assets/images/logos/logo-dark.png";
             localStorage.setItem("theme", "dark");
         } else {
-            themeIcon.src = "/assets/images/icons/dark-mode.png";
+            updateThemeIcon(false);
             logo.src = "/assets/images/logos/logo-light.png";
             localStorage.setItem("theme", "light");
         }
