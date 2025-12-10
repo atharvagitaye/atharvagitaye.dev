@@ -212,10 +212,10 @@ body.dark-mode .name {
     color: #666;
     margin-bottom: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 8px;
 }
 
 body.dark-mode .professions {
@@ -227,8 +227,7 @@ body.dark-mode .professions {
 }
 
 .separator {
-    color: rgb(66, 165, 245);
-    font-weight: 700;
+    display: none;
 }
 
 .social-links {
