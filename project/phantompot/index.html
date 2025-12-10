@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PhantomPot - Atharva Gitaye</title>
+        <link rel="stylesheet" href="../../assets/css/reset.css" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <link rel="stylesheet" href="../../assets/css/responsive.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body>
+        <header></header>
+
+        <main class="project-detail">
+            <div class="container">
+                <a href="/projects" class="back-link">
+                    <i data-lucide="arrow-left"></i>
+                    Back to Projects
+                </a>
+
+                <article class="project-content">
+                    <div class="project-header">
+                        <h1 class="project-title">PhantomPot</h1>
+                        <p class="project-period">Jul 2025 - Oct 2025</p>
+                        <div class="project-tags">
+                            <span class="tag">Splunk</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="project-description">
+                        <h2>Overview</h2>
+                        <p>
+                            PhantomPot is an advanced honeypot system designed to simulate vulnerable services and capture attacker behavior
+                            for threat analysis and security research purposes.
+                        </p>
+
+                        <h2>Key Features</h2>
+                        <ul>
+                            <li>Simulated vulnerable services including HTTP, SSH, and FTP protocols</li>
+                            <li>Real-time capture of attacker credentials and malicious payloads</li>
+                            <li>GeoIP tracking to identify attacker locations and patterns</li>
+                            <li>Automated email alerts for immediate threat notification</li>
+                            <li>Integration with Splunk for comprehensive log analysis and visualization</li>
+                        </ul>
+
+                        <h2>Technical Implementation</h2>
+                        <p>
+                            The system is built using Python for the core honeypot services, containerized with Docker for easy deployment
+                            and isolation. All captured data is forwarded to Splunk for real-time monitoring and historical analysis.
+                        </p>
+
+                        <h2>Impact</h2>
+                        <p>
+                            PhantomPot provides valuable insights into attacker methodologies, helping security teams understand
+                            threat vectors and improve their defensive strategies.
+                        </p>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/atharvagitaye/phantompot" target="_blank" class="project-link">
+                            <i data-lucide="github"></i>
+                            View on GitHub
+                        </a>
+                        <!-- <a href="#" class="project-link">
+                            <i data-lucide="external-link"></i>
+                            Live Demo
+                        </a> -->
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer></footer>
+
+        <script type="module" src="../../assets/js/main.js"></script>
+    </body>
+</html>

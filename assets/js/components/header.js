@@ -15,8 +15,8 @@ export function initHeader() {
         lucide.createIcons();
     }
 
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem("theme") || "light";
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem("theme") || "dark";
     if (currentTheme === "dark") {
         document.body.classList.add("dark-mode");
         updateThemeIcon(true);
