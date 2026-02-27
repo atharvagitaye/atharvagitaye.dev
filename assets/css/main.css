@@ -266,6 +266,15 @@ body.dark-mode .social-links a {
     height: 24px;
 }
 
+.social-links a svg.social-icon {
+    fill: currentColor;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -570,6 +579,15 @@ body.dark-mode .footer-social a {
 }
 
 .footer-social a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-social a svg.social-icon {
+    fill: currentColor;
+}
+
+.footer-social a img {
     width: 20px;
     height: 20px;
 }
